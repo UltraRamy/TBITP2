@@ -24,7 +24,7 @@ def rbp(ranking, p = 0.8):
         score RBP
   """
   score = 0.
-  for i in range(1, len(ranking)):
+  for i in range(1, len(ranking) + 1):
     pos = i - 1
     score += ranking[pos] * (p ** (i - 1))
   return (1 - p) * score
